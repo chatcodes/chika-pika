@@ -1,0 +1,15 @@
+UID = time of registration in millis
+username = string
+password = hashed?
+First Name = String
+Last Name = String
+College = String
+email-id = string
+profile pic = save as UID.jpg on server
+Credits = integer
+Quesitons answered count = integer
+Date of registration = TIMESTAMP
+List of questions answered = String Array[] containing question IDs
+Rating = Float (precision 2)
+
+
