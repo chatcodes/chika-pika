@@ -8,9 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by shikh on 11-10-2016.
- */
+    // For the choices activity
 
 public class CustomList extends ArrayAdapter<String> {
 

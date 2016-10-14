@@ -1,27 +1,30 @@
 package com.radioactiveyak.android.chatcodes;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Choices extends AppCompatActivity {
+public class Choices  extends Fragment{
 
     ListView list;
     String web[] = {"COE/SE/IT", "ECE/EE/EEE", "CE", "ME/MAM", "MC", "EP", "PIE", "PCT", "ENE", "BT"};
     Integer imgId = R.drawable.ic_add_circle_outline_black_24dp;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choices);
+        //setContentView(R.layout.activity_choices);
 
-        CustomList adapter = new CustomList(this, web, imgId);
-        list = (ListView)findViewById(R.id.listView);
+        CustomList adapter = new CustomList(getActivity(), web, imgId);
+        list = (ListView)getView().findViewById(R.id.listView);
         list.setAdapter(adapter);
         final int[] count = new int[100];
         list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -46,5 +49,12 @@ public class Choices extends AppCompatActivity {
         }
         );
 
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
+    {
+        return inflater.inflate(R.layout.activity_choices, container, false);
     }
 }
