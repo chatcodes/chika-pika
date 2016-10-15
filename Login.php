@@ -10,15 +10,17 @@ $validate->execute([$_POST['username'],$_POST['password']);
 try{$row=$validate->fetch(PDO::FETCH_BOTH);}
 catch(PDOException $ex){}
 
+$response=array();
+
 if(($row['Name']==NULL)&&($row['Number']==NULL))
-$response="No Such Account Exists";
+$response['svreply']="No Such Account Exists";
 
 else
-$response="Welcome";
+$response['svreply']="Welcome";
 }
 
 else
-$response="Enter Username/Password";
+$response['svreply']="Enter Username/Password";
 
 echo json_encode($response);
 
