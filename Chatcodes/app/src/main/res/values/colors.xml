@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="RatingGoodGreen">#0F9611</color>
+    <color name="RatingAverageOrange">#EA6C04</color>
+    <color name="RatingPoorRed">#E02100</color>
 </resources>
