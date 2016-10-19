@@ -29,7 +29,9 @@
         <fragment android:name=".Fragment2" />
         <fragment android:name=".Fragment3" />
 
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".Profile" />
+        <activity android:name=".UserPofile" />
+        <activity android:name=".ProfileEdit"></activity>
     </application>
 
 </manifest>
