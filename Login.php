@@ -1,26 +1,25 @@
 <?php
 
 include_once 'connect.php';
-
+$response=array();
 if((isset($_POST['username']))&&(isset($_POST['password])))
 {
-$validate=$con->prepare("SELECT Username,Password from login where Name=? AND Password=?");
-$validate->execute([$_POST['username'],$_POST['password']);
+$validate=$con->prepare("SELECT u_name,Pass_word from user where u_Name=? AND Pass_word=?");
+$validate->execute([$_POST['u_name'],$_POST['pass_word']);
 
 try{$row=$validate->fetch(PDO::FETCH_BOTH);}
-catch(PDOException $ex){}
+catch(PDOException $ex){$response['Error']=1;$response['ErCode']='Unable to Access Data';}
 
-$response=array();
-
-if(($row['Name']==NULL)&&($row['Number']==NULL))
-$response['svreply']="No Such Account Exists";
-
-else
-$response['svreply']="Welcome";
+if(($row['u_name']==NULL)&&($row['pass_word']==NULL))
+{
+$response['Error']=1;$response['ErCode']='Wrong Username/Password';}
 }
 
 else
-$response['svreply']="Enter Username/Password";
+{
+$response['Error']=0;
+$response['svreply']='Enter';
+}
 
 echo json_encode($response);
 
