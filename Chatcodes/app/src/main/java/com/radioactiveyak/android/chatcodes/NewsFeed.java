@@ -84,7 +84,7 @@ public class NewsFeed extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.feed, menu);
         return true;
     }
 

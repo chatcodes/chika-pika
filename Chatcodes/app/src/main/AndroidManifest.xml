@@ -19,19 +19,24 @@
 
         <activity android:name=".LoginActivity" />
         <activity android:name=".NewsFeed">
+        </activity>
+
+        <fragment android:name=".Fragment2" />
+
+        <activity android:name=".UserPofile" />
+        <activity android:name=".ProfileEdit" />
+
+        <activity
+            android:name=".Feed"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-
-        <fragment android:name=".Fragment2" />
-        <fragment android:name=".Fragment3" />
-
-        <activity android:name=".Profile" />
-        <activity android:name=".UserPofile" />
-        <activity android:name=".ProfileEdit"></activity>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@ import static com.radioactiveyak.android.chatcodes.UserPofile.getBitmapFromURL;
 /**
  * Created by Aditya on 19/10/2016.
  */
-
+/*
 public class tempp {
 
     ListView lv;
@@ -44,12 +44,12 @@ public class tempp {
     static final String TAG_BRANCH = "branch";
 
 
-    class LoadAllposts extends AsyncTask<String, String, String> {
+  /*  class LoadAllposts extends AsyncTask<String, String, String> {
 
         /**
          * Before starting background thread Show Progress Dialog
          * */
-        @Override
+  /*      @Override
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog();
@@ -62,7 +62,7 @@ public class tempp {
         /**
          * getting All posts from url
          * */
-        protected String doInBackground(String... params) {
+/*        protected String doInBackground(String... params) {
 
             // getting JSON string from URL
             final JSONArray jsonArray = new JSONParser().makeHttpRequest(AURL);
@@ -88,11 +88,11 @@ public class tempp {
 
             return "done";
         }
-
+*/
         /**
          * After completing background task Dismiss the progress dialog
          * **/
-        protected void onPostExecute(String file_url) {
+ /*       protected void onPostExecute(String file_url) {
             // dismiss the dialog after getting all posts
 
             // updating UI from Background Thread
@@ -101,7 +101,7 @@ public class tempp {
                     /**
                      * Updating parsed JSON data into ListView
                      * */
-                    pDialog.dismiss();
+/*                    pDialog.dismiss();
                     if( plist.size() != 0 ){
                         //tv.setVisibility(View.INVISIBLE);
                         lv.setVisibility(View.VISIBLE);
@@ -141,3 +141,4 @@ public class tempp {
 
 
 }
+*/
