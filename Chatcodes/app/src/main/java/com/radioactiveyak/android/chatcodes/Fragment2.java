@@ -19,35 +19,6 @@ public class Fragment2 extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        FloatingActionButton fab = (FloatingActionButton) getView().findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                // Alert dialog box for the add button
-                //Can be removed
-                AlertDialog.Builder a_builder = new AlertDialog.Builder(getActivity());
-
-                a_builder.setMessage("Post a query?").setCancelable(true)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //Do something
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-
-                AlertDialog alert = a_builder.create();
-                alert.setTitle("New Post");
-                alert.show();
-            }
-        });
     }
 
 

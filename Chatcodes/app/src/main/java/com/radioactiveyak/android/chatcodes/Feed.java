@@ -3,7 +3,6 @@ package com.radioactiveyak.android.chatcodes;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -51,7 +50,7 @@ public class Feed extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        /*
+
         //Code I've inserted
 
         viewPager = (ViewPager)findViewById(R.id.viewPager);
@@ -80,11 +79,11 @@ public class Feed extends AppCompatActivity
         });
 
         //Code end here
-        */
+
 
     }
 
-    /*
+
     //Code I've inserted
     private class CustomAdapter extends FragmentPagerAdapter {
 
@@ -137,7 +136,7 @@ public class Feed extends AppCompatActivity
 
 
     //Code ends here
-    */
+
 
     @Override
     public void onBackPressed() {
